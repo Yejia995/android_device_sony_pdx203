@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_pdx203.mk
+    $(LOCAL_DIR)/dot_pdx203.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_pdx203-user \
-    evolution_pdx203-userdebug \
-    evolution_pdx203-eng
+    dot_pdx203-user \
+    dot_pdx203-userdebug \
+    dot_pdx203-eng
