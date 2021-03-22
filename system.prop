@@ -9,11 +9,7 @@ ro.surfaceflinger.supportsbackground_blur=1
 ro.surface_flinger.supports_background_blur=1 
 
 # Bluetooth
-persist.vendor.bt.a2dp.aac_whitelist=false
 persist.vendor.btstack.enable.twsplus=false
-persist.vendor.btstack.enable.lpa=true
-persist.vendor.bt.a2dp.hal.implementation=true
-ro.bluetooth.library_name=libbluetooth_qti.so
 
 # Camera
 camera.disable_zsl_mode=true
