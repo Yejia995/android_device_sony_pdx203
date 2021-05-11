@@ -76,6 +76,10 @@ ro.semc.version.sw_variant=GLOBAL4GB-C2
 
 # Vendor
 ro.vendor.qti.va_aosp.support=1
+ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
+# SurfaceFlinger brightness tweak
+ro.sf.force_light_brightness=1
 
 # Zygote
 persist.device_config.runtime_native.usap_pool_enabled=true
