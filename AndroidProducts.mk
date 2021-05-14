@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/dot_pdx203.mk
+    $(LOCAL_DIR)/fluid_pdx203.mk
 
 COMMON_LUNCH_CHOICES := \
-    dot_pdx203-user \
-    dot_pdx203-userdebug \
-    dot_pdx203-eng
+    fluid_pdx203-user \
+    fluid_pdx203-userdebug \
+    fluid_pdx203-eng

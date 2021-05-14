@@ -22,20 +22,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from common.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Pixel Experience stuff
-$(call inherit-product, vendor/dot/config/common.mk)
-TARGET_BOOT_ANIMATION_RES := 1440
+# Inherit some common Project-Fluid stuff
+$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
-WITH_GAPPS := true
-DOT_BUILD_TYPE := Unoffical
+TARGET_INCLUDE_GAPPS := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_GOOGLE_RECORDER := true
+TARGET_INCLUDE
+FLUID_BUILD_TYPE := Unoffical
 IS_PHONE := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 PRODUCT_BRAND := Sony
 PRODUCT_DEVICE := pdx203
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_NAME := dot_pdx203
+PRODUCT_NAME := fluid_pdx203
 PRODUCT_MODEL := Xperia 1 II
-
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.fluid.maintainer=Shion \
+	ro.fluid.cpu=SDM865
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 TARGET_VENDOR_PRODUCT_NAME := pdx203
