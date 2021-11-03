@@ -27,10 +27,6 @@ $(call inherit-product, vendor/sony/pdx203/pdx203-vendor.mk)
 # Inherit from common
 $(call inherit-product, device/sony/edo-common/edo.mk)
 
-# Custom sony stuff
-# Note: closed sourced
-$(call inherit-product, device/sony/xperia-common/xperia.mk)
-
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
@@ -45,10 +41,19 @@ LOCAL_DTB := $(LOCAL_PATH)/prebuilt/dtb.img
 PRODUCT_COPY_FILES += \
     $(LOCAL_DTB):dtb.img
 
-# Device specific overlay
-DEVICE_PACKAGE_OVERLAYS += \
-#     $(LOCAL_PATH)/overlay-pe
 
 # Shims
 PRODUCT_PACKAGES += \
     lib-imsvtshim
+
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
+# For userdebug builds
+PRODUCT_PRODUCT_PROPERTIES += \
+	ro.secure=0 \
+	ro.adb.secure=0 \
+	ro.debuggable=1
+
+# MTP
+PRODUCT_PRODUCT_PROPERTIES += \
+	persist.sys.usb.config=mtp,adb
