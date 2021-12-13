@@ -22,24 +22,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from common.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
-# Inherit some common Project-Fluid stuff
-$(call inherit-product, vendor/fluid/config/common_full_phone.mk)
+# Inherit some common Arrow-OS stuff
+$(call inherit-product, vendor/arrow/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_GAPPS := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_GOOGLE_RECORDER := true
-FLUID_BUILD_TYPE := Unoffical
 IS_PHONE := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
 PRODUCT_BRAND := Sony
 PRODUCT_DEVICE := pdx203
 PRODUCT_MANUFACTURER := Sony
-PRODUCT_NAME := fluid_pdx203
+PRODUCT_NAME := arrow_pdx203
 PRODUCT_MODEL := Xperia 1 II
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.fluid.maintainer=Shion \
-	ro.fluid.cpu=SDM865
 PRODUCT_GMS_CLIENTID_BASE := android-sonymobile
 
 TARGET_VENDOR_PRODUCT_NAME := pdx203

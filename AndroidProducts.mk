@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/fluid_pdx203.mk
+    $(LOCAL_DIR)/arrow_pdx203.mk
 
 COMMON_LUNCH_CHOICES := \
-    fluid_pdx203-user \
-    fluid_pdx203-userdebug \
-    fluid_pdx203-eng
+    arrow_pdx203-user \
+    arrow_pdx203-userdebug \
+    arrow_pdx203-eng
