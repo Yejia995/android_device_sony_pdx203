@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from common.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Inherit Lawnchair stuff
+$(call inherit-product-if-exists, vendor/lawnchair/lawnchair.mk)
+
 # Inherit some common Arrow-OS stuff
 $(call inherit-product, vendor/arrow/config/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
